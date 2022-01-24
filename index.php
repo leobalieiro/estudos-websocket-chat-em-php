@@ -63,18 +63,19 @@
 
 <body>
     <?php
-        //include("chat.php");
-        if($_POST){
-            $msg = $_REQUEST['message'];
-            $socket = socket_create(AF_INET, SOCK_STREAM, 0);
-            socket_connect($socket, "127.0.0.1", 20205);
+    // Teste 2
+    //include("chat.php"); 
+    if ($_POST) {
+        $msg = $_REQUEST['message'];
+        $socket = socket_create(AF_INET, SOCK_STREAM, 0);
+        socket_connect($socket, "127.0.0.1", 20205);
 
-            socket_write($socket, $msg, strlen($msg));
+        socket_write($socket, $msg, strlen($msg));
 
-            echo "Servido disse " . trim(socket_read($socket, 1924));
-        }
+        echo "Servido disse " . trim(socket_read($socket, 1924));
+    }
     ?>
-    
+
     <form method="post">
         <input name="message" autocomplete="off" /><button type="submit">Send</button>
     </form>

@@ -1,5 +1,6 @@
-<?php
-function option_1()
+<?php 
+// Teste 2
+function option_1() 
 {
     $host = "localhost";
     $port = 20205;
