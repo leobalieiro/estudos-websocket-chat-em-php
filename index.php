@@ -63,7 +63,7 @@
 
 <body>
     <?php
-    // Teste 2
+    // Versão 3
     //include("chat.php"); 
     if ($_POST) {
         $msg = $_REQUEST['message'];
